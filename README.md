@@ -1,4 +1,4 @@
-# Rebus.TODO
+# Rebus.Serilog
 
 Provides a Serilog logging integration for [Rebus](https://github.com/rebus-org/Rebus).
 
