@@ -8,3 +8,7 @@
 
 * Update target platform to .NET 4.5.2 because it is the lowest version of .NET currently supported by Microsoft
 * Update Serilog dependency to 2.2.1
+
+## 2.0.0-b01
+
+* Test release
