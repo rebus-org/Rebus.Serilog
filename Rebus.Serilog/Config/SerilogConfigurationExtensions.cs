@@ -1,8 +1,9 @@
-﻿using Rebus.Config;
+﻿using System;
+using Rebus.Serilog;
 using Serilog;
 using Serilog.Configuration;
 
-namespace Rebus.Serilog
+namespace Rebus.Config
 {
     /// <summary>
     /// Configuration extensions for setting up logging with Serilog
@@ -14,6 +15,8 @@ namespace Rebus.Serilog
         /// </summary>
         public static void Serilog(this RebusLoggingConfigurer configurer, LoggerConfiguration loggerConfiguration)
         {
+            if (configurer == null) throw new ArgumentNullException(nameof(configurer));
+            if (loggerConfiguration == null) throw new ArgumentNullException(nameof(loggerConfiguration));
             configurer.Use(new SerilogLoggerFactory(loggerConfiguration));
         }
 
@@ -22,7 +25,18 @@ namespace Rebus.Serilog
         /// </summary>
         public static void Serilog(this RebusLoggingConfigurer configurer, ILogger baseLogger)
         {
+            if (configurer == null) throw new ArgumentNullException(nameof(configurer));
+            if (baseLogger == null) throw new ArgumentNullException(nameof(baseLogger));
             configurer.Use(new SerilogLoggerFactory(baseLogger));
+        }
+
+        /// <summary>
+        /// Configures Rebus to use Serilog for all of its internal logging, using Serilog's global <see cref="Log.Logger"/> as base logger
+        /// </summary>
+        public static void Serilog(this RebusLoggingConfigurer configurer)
+        {
+            if (configurer == null) throw new ArgumentNullException(nameof(configurer));
+            configurer.Use(new SerilogLoggerFactory(Log.Logger));
         }
 
         /// <summary>
