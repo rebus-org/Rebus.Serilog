@@ -20,12 +20,21 @@ if "%version%"=="" (
 
 set Version=%version%
 
+if exist "%deploydir%" (
+	rd "%deploydir%" /s/q
+)
+
 pushd %root%
+
+dotnet restore
+if %ERRORLEVEL% neq 0 (
+	popd
+ 	goto exit_fail
+)
 
 dotnet pack "%root%/%project%" -c Release -o "%deploydir%" /p:PackageVersion=%version%
 if %ERRORLEVEL% neq 0 (
 	popd
- 	echo Error calling %clean%
  	goto exit_fail
 )
 
