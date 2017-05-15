@@ -47,14 +47,19 @@ namespace Rebus.Serilog
                 _logger.Warning(message, objs);
             }
 
-            public void Error(Exception exception, string message, params object[] objs)
+            public void Warn(Exception exception, string message, params object[] objs)
             {
-                _logger.Error(exception, message, objs);
+                _logger.Warning(exception, message, objs);
             }
 
             public void Error(string message, params object[] objs)
             {
                 _logger.Error(message, objs);
+            }
+
+            public void Error(Exception exception, string message, params object[] objs)
+            {
+                _logger.Error(exception, message, objs);
             }
         }
     }
