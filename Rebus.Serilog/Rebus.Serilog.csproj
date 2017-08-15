@@ -49,7 +49,7 @@
     <None Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="rebus" Version="4.0.0-b10" />
+    <PackageReference Include="rebus" Version="4.0.0" />
     <PackageReference Include="serilog" Version="2.4.0" />
   </ItemGroup>
 <!--   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
