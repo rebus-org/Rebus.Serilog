@@ -29,3 +29,8 @@
 
 * Update to Rebus 4
 * Add .NET Core support (netstandard1.6)
+
+## 5.0.0
+
+* Update to Rebus 5
+* Target .NET 4.5, .NET 4.6, and .NET Standard 2.0
