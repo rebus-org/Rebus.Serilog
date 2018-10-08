@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "stuff", "stuff", "{1ABDD7C1-1F8D-402D-8692-3E4B66962DE0}"
 	ProjectSection(SolutionItems) = preProject
@@ -10,7 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "stuff", "stuff", "{1ABDD7C1
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rebus.Serilog", "Rebus.Serilog\Rebus.Serilog.csproj", "{3CEEF673-4E4F-4057-8C14-3D83F024E8A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rebus.Serilog", "Rebus.Serilog\Rebus.Serilog.csproj", "{3CEEF673-4E4F-4057-8C14-3D83F024E8A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{D5E1BCF8-D02A-4B74-A3C2-F50A6E385F86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,8 +24,15 @@ Global
 		{3CEEF673-4E4F-4057-8C14-3D83F024E8A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CEEF673-4E4F-4057-8C14-3D83F024E8A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CEEF673-4E4F-4057-8C14-3D83F024E8A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5E1BCF8-D02A-4B74-A3C2-F50A6E385F86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5E1BCF8-D02A-4B74-A3C2-F50A6E385F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5E1BCF8-D02A-4B74-A3C2-F50A6E385F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5E1BCF8-D02A-4B74-A3C2-F50A6E385F86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06D24286-799B-45FE-BFB0-0C5E1CC57357}
 	EndGlobalSection
 EndGlobal
