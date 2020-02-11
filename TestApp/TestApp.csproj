@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="rebus" Version="5.0.0" />
-    <PackageReference Include="serilog" Version="2.7.1" />
+    <PackageReference Include="rebus" Version="6.0.0" />
+    <PackageReference Include="serilog" Version="2.9.0" />
     <PackageReference Include="serilog.sinks.coloredconsole" Version="3.0.1" />
   </ItemGroup>
 
