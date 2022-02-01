@@ -1,4 +1,4 @@
-# Rebus.Serilog
+﻿# Rebus.Serilog
 
 [![install from nuget](https://img.shields.io/nuget/v/Rebus.Serilog.svg?style=flat-square)](https://www.nuget.org/packages/Rebus.Serilog)
 
@@ -28,4 +28,22 @@ Configure.With(...)
 	.Transport(t => t.Use(..., queueName))
 	.(...)
 	.Start();
+```
+
+Initialize your Serilog logging with Rebus' correlation ID enricher if you'd like the correlation ID of handled messages to be added automatically to all log output generated from message handlers:
+
+```csharp
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.(...)
+    .Enrich.WithRebusCorrelationId("CorrelationId")
+    .CreateLogger();
+```
+
+and then either use real structured logging (e.g. to an aggregator like Elastic), or remember to include it in your output template (here shown with `ColoredConsole`):
+
+```csharp
+//                                                                                  👇
+Log.Logger = new LoggerConfiguration()
+	.WriteTo.ColoredConsole(outputTemplate: "{Timestamp:HH:mm:ss} {Level:u3} ({CorrelationId}) {Message}{NewLine}{Exception}")
+	.(...)
 ```

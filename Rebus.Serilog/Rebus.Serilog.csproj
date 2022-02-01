@@ -13,7 +13,20 @@
 		<PackageIconUrl>https://github.com/mookid8000/Rebus/raw/master/artwork/little_rebusbus2_copy-200x200.png</PackageIconUrl>
 		<RepositoryUrl>https://github.com/rebus-org/Rebus.Serilog</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
+		<PackageIcon>little_rebusbus2_copy-500x500.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
+	<ItemGroup>
+	  <None Include="..\artwork\little_rebusbus2_copy-500x500.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Include="..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="rebus" Version="6.0.0" />
 		<PackageReference Include="serilog" Version="2.9.0" />
