@@ -30,4 +30,7 @@
 ## 6.0.0
 * Update to Rebus 6 - thanks [rsivanov]
 
+## 7.0.0
+* Target .NET Standard 2.0 only
+
 [rsivanov]: https://github.com/rsivanov
