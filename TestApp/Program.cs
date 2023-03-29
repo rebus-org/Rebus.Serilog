@@ -6,7 +6,7 @@ using Serilog;
 #pragma warning disable CS1998
 
 Log.Logger = new LoggerConfiguration()
-    .WriteTo.ColoredConsole(outputTemplate: "{Timestamp:HH:mm:ss} {Level:u3} ({CorrelationId}) {Message}{NewLine}{Exception}")
+    .WriteTo.Console(outputTemplate: "{Timestamp:HH:mm:ss} {Level:u3} ({CorrelationId}) {Message}{NewLine}{Exception}")
     .Enrich.WithRebusCorrelationId("CorrelationId")
     .CreateLogger();
 
