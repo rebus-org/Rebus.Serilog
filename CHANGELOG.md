@@ -33,4 +33,7 @@
 ## 7.0.0
 * Target .NET Standard 2.0 only
 
+## 8.0.0-alpha01
+* Update to Rebus 8
+
 [rsivanov]: https://github.com/rsivanov
