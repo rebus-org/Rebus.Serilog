@@ -33,7 +33,8 @@
 ## 7.0.0
 * Target .NET Standard 2.0 only
 
-## 8.0.0-alpha01
+## 8.0.0-alpha02
 * Update to Rebus 8
+* Update Serilog dependency to 3.0.1
 
 [rsivanov]: https://github.com/rsivanov
