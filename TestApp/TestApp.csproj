@@ -4,7 +4,7 @@
 		<TargetFramework>net7.0</TargetFramework>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="rebus" Version="8.0.0-alpha10" />
+		<PackageReference Include="rebus" Version="8.0.1" />
 		<PackageReference Include="serilog" Version="3.0.1" />
 		<PackageReference Include="serilog.sinks.console" Version="4.1.0" />
 		<ProjectReference Include="..\Rebus.Serilog\Rebus.Serilog.csproj" />
